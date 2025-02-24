@@ -1,0 +1,12 @@
+const MultiPlayerPage = () => {
+    return (
+        <div className="h-[90dvh] w-[80dvw] flex flex-row justify-center items-center">
+            <h1>
+
+                Multi Player Page
+            </h1>
+        </div>
+    )
+}
+
+export default MultiPlayerPage
