@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from "@/layouts/layout"
+import Layout from "@/layouts/DashboardLayout"
 import DashboardPage from './routes/home/page';
 import PlayModePage from './routes/playmode/page';
 import LeaderboardPage from './routes/leaderboard/page';

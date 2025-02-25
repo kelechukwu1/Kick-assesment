@@ -1,5 +1,3 @@
-import type { IconType } from "react-icons";
-
 import {
   SidebarGroup,
   SidebarMenu,
@@ -14,14 +12,14 @@ export function NavMinor({
   items: {
     name: string
     url: string
-    icon: IconType
+    icon: string
   }[]
 }) {
   const location = useLocation();
 
   return (
     <SidebarGroup>
-      <SidebarMenu>
+      <SidebarMenu className="space-y-3">
         {items.map((item) => {
           const isActive = location.pathname === `/${item.url}`;
           return (
@@ -29,7 +27,13 @@ export function NavMinor({
               <SidebarMenuItem>
                 <SidebarMenuButton asChild className={`cursor-pointer hover:bg-[#34112f] p-5 ${isActive ? "bg-[#34112f]" : ""}`}>
                   <a href={item.url}>
-                    <item.icon className="text-gray-500" />
+                    <img
+                      src={item?.icon}
+                      alt="Home Icon"
+                      width={20}
+                      height={20}
+                      className="text-gray-500"
+                    />
                     <span className="text-gray-500">{item.name}</span>
                   </a>
                 </SidebarMenuButton>

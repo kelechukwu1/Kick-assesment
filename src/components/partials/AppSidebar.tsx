@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import { NavMain } from "@/components/nav-main"
-import { NavMinor } from "@/components/nav-minor"
-import { NavTrivia } from "@/components/nav-trivia"
+import { NavMain } from "@/components/partials/NavMain"
+import { NavMinor } from "@/components/partials/NavMinor"
+import { NavTrivia } from "@/components/partials/NavTrivia"
 import {
   Sidebar,
   SidebarContent,
@@ -10,19 +10,23 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar"
 import { sidebarData } from "@/data"
+import { Logo } from "./Logo"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <img src="/logo.png" alt="Kick logo" height={100} width={100} className="ml-3" />
+        <Logo />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={sidebarData.navMain} />
         <NavMinor items={sidebarData.NavMinor} />
       </SidebarContent>
+
       <SidebarFooter>
-        <NavTrivia />
+        <SidebarContent>
+          <NavTrivia />
+        </SidebarContent>
       </SidebarFooter>
     </Sidebar>
   )

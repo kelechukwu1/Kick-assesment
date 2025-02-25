@@ -1,8 +1,7 @@
 const LogoutPage = () => {
     return (
-        <div className="h-[90dvh] w-[80dvw] flex flex-row justify-center items-center">
+        <div className="h-full w-full flex flex-row justify-center items-center">
             <h1>
-
                 Logout Page
             </h1>
         </div>
