@@ -13,10 +13,12 @@ const PlayModePage = () => {
                 <div className="flex flex-col space-y-10">
                     <div className="space-y-3 text-black">
                         {playMode.map((mode) => (
-                            <div key={mode.id} className="bg-[#f6e3e2] flex gap-10 p-5 rounded-sm cursor-pointer">
+                            <div key={mode.id} className="bg-[#f6e3e2] flex gap-10 p-3 rounded-sm cursor-pointer">
                                 <img
                                     src={mode.Icon}
                                     alt={mode.mode}
+                                    width={50}
+                                    height={50}
                                 />
                                 <div className="text-sm uppercase">{mode.mode}</div>
                             </div>
@@ -25,7 +27,7 @@ const PlayModePage = () => {
                     <div className="bg-[#262b3b] p-5 rounded-sm flex flex-col items-center space-y-5 py-14">
                         <h1 className="uppercase text-sm">Featured</h1>
                         <p className="text-center text-xs w-54">Take part in challenges with friends or other players</p>
-                        <Button size={"sm"} className="bg-[#e83873] cursor-pointer font-semibold text-xs">Find Friends</Button>
+                        <Button size={"sm"} className="bg-[#e83873] hover:bg-[#d7306b] transition all duration-300 cursor-pointer font-semibold text-xs">Find Friends</Button>
                     </div>
                 </div>
                 <div className="bg-[#f6e3e2] rounded-sm text-black p-8">

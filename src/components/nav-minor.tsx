@@ -1,6 +1,4 @@
-import {
-  type LucideIcon,
-} from "lucide-react"
+import type { IconType } from "react-icons";
 
 import {
   SidebarGroup,
@@ -16,7 +14,7 @@ export function NavMinor({
   items: {
     name: string
     url: string
-    icon: LucideIcon
+    icon: IconType
   }[]
 }) {
   const location = useLocation();

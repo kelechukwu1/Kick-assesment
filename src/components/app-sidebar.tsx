@@ -15,7 +15,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <h1 className="text-xl font-bold ml-5">Kick</h1>
+        <img src="/logo.png" alt="Kick logo" height={100} width={100} className="ml-3" />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={sidebarData.navMain} />

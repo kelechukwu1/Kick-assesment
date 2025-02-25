@@ -345,7 +345,7 @@ function SidebarFooter({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="sidebar-footer"
       data-sidebar="footer"
-      className={cn("flex flex-col gap-2 p-2 max-w-fit", className)}
+      className={cn("flex flex-col gap-2 p-2 max-w-full mx-2", className)}
       {...props}
     />
   )
@@ -371,7 +371,7 @@ function SidebarContent({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="sidebar-content"
       data-sidebar="content"
       className={cn(
-        "flex min-h-0 flex-1 flex-col gap-5 overflow-auto max-w-fit",
+        "flex min-h-0 flex-1 flex-col justify-between overflow-auto max-w-full mx-2",
         className
       )}
       {...props}

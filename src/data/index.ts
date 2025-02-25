@@ -1,12 +1,10 @@
-import {
-    BookOpen,
-    Bot,
-    Frame,
-    Map,
-    PieChart,
-    Settings2,
-    SquareTerminal,
-} from "lucide-react"
+import { BiHomeAlt2, BiCategory, BiHelpCircle } from "react-icons/bi";
+import { AiOutlinePlayCircle } from "react-icons/ai";
+import { MdOutlineLeaderboard } from "react-icons/md";
+import { IoIosPeople, IoMdLogOut } from "react-icons/io";
+import { ImStatsBars } from "react-icons/im";
+import { IoSettingsOutline } from "react-icons/io5";
+import { SiReadthedocs } from "react-icons/si";
 
 export const howToPlay = [
     {
@@ -39,17 +37,17 @@ export const playMode = [
     {
         id: 1,
         mode: "SINGLE PLAYER MODE",
-        Icon: ""
+        Icon: "/single.png"
     },
     {
         id: 2,
         mode: "MULTIPLAYER PLAYER MODE",
-        Icon: ""
+        Icon: "/multi.png"
     },
     {
         id: 3,
         mode: "CHALLENGE MODE",
-        Icon: ""
+        Icon: "/challenge.png"
     }
 ]
 
@@ -58,54 +56,54 @@ export const sidebarData = {
         {
             title: "Home",
             url: "/",
-            icon: SquareTerminal,
+            icon: BiHomeAlt2,
         },
         {
             title: "Play Mode",
             url: "play-mode",
-            icon: Bot,
+            icon: AiOutlinePlayCircle,
         },
         {
             title: "Leaderboard",
             url: "leaderboard",
-            icon: BookOpen,
+            icon: MdOutlineLeaderboard,
         },
         {
             title: "Categories",
             url: "categories",
-            icon: Settings2,
+            icon: BiCategory,
         },
         {
             title: "Multiplayer",
             url: "multiplayer",
-            icon: Settings2,
+            icon: IoIosPeople,
         },
         {
             title: "Gaming stats",
             url: "gaming-stats",
-            icon: Settings2,
+            icon: ImStatsBars,
         },
     ],
     NavMinor: [
         {
             name: "How to play",
             url: "how-to-play",
-            icon: Frame,
+            icon: SiReadthedocs,
         },
         {
             name: "Settings",
             url: "settings",
-            icon: PieChart,
+            icon: IoSettingsOutline,
         },
         {
             name: "Help",
             url: "help",
-            icon: Map,
+            icon: BiHelpCircle,
         },
         {
             name: "Logout",
             url: "logout",
-            icon: Map,
+            icon: IoMdLogOut,
         },
     ],
 }
