@@ -20,7 +20,7 @@ This project is a React application built using [Vite](https://vitejs.dev/) for 
 ```
 
 
-**Install dependencies:**
+2. **Install dependencies:**
 
 Important: Some dependencies may require the --legacy-peer-deps flag. Run:
 
@@ -28,8 +28,8 @@ Important: Some dependencies may require the --legacy-peer-deps flag. Run:
   npm install --legacy-peer-deps
 ```
 
-**Usage**
-Development
+3. **Usage:**
+
 To start the development server, run:
 
 ```bash
