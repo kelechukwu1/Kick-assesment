@@ -3,11 +3,11 @@ import { leaderboardData } from "@/data"
 
 const LeaderboardPage = () => {
     return (
-        <div className="p-5 w-full flex-1 flex flex-col items-center">
-            <div className="space-y-5">
-                <div className="w-2/4 mb-5 space-y-2 lg:my-9">
-                    <h1 className="text-sm">Hello Stella,</h1>
-                    <p className="text-xs">Welcome to the Leaderboard! Here's where champions are recognized. Check out the top performers, see who's dominating the trivia game, and strive to claim the throne. Can you climb to the highest ranks and become a trivia legend? Compete, conquer, and make your mark on the leaderboard today!</p>
+        <div className="p-8 w-full flex-1 flex flex-col items-center">
+            <div className="space-y-3">
+                <div className="w-full lg:w-2/4 mb-5 space-y-2 lg:my-7">
+                    <h1 className="text-md">Hello Stella,</h1>
+                    <p className="text-sm">Welcome to the Leaderboard! Here's where champions are recognized. Check out the top performers, see who's dominating the trivia game, and strive to claim the throne. Can you climb to the highest ranks and become a trivia legend? Compete, conquer, and make your mark on the leaderboard today!</p>
                 </div>
 
                 <div className="flex flex-col gap-5">
@@ -55,10 +55,9 @@ const LeaderboardPage = () => {
                             />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-10">
+                    <div className="grid grid-cols-2 gap-7">
                         {leaderboardData.map((item) => (
-
-                            <div className="bg-[#FF1975] flex justify-between items-center px-5 py-3 rounded-lg">
+                            <div key={item.id} className="bg-[#FF1975] flex flex-col gap-2 md:flex-row justify-between items-center px-3 md:px-5 py-4 rounded-lg">
                                 <div className="flex gap-3 justify-center items-center">
                                     <span>{`0${item.id}`}</span>
                                     <Avatar
@@ -67,19 +66,25 @@ const LeaderboardPage = () => {
                                         width={35}
                                         height={35}
                                     />
-                                    <span>{item.name}</span>
+                                    <span className="">
+                                        {item.name}
+                                    </span>
                                 </div>
-                                <span>{item.points}</span>
-                                <Avatar
-                                    src={item.coin}
-                                    alt="gold avatar"
-                                    width={20}
-                                    height={20}
-                                    className="md:mr- lg:mr-20"
-                                />
+                                <div className="flex flex-col md:flex-row lg:mr-20">
+                                    <span className="flex lg:gap-32">
+                                        <span>{item.points}</span>
+                                        <Avatar
+                                            src={item.coin}
+                                            alt="gold avatar"
+                                            width={20}
+                                            height={20}
+                                            className=""
+                                        />
+                                    </span>
+
+                                </div>
                             </div>
                         ))}
-                        <div></div>
                     </div>
                 </div>
             </div>

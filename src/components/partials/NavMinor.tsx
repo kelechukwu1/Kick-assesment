@@ -19,13 +19,13 @@ export function NavMinor({
 
   return (
     <SidebarGroup>
-      <SidebarMenu className="space-y-3">
+      <SidebarMenu className="space-y-1 w-[90%] mx-auto">
         {items.map((item) => {
           const isActive = location.pathname === `/${item.url}`;
           return (
             <Link key={item.name} to={item.url}>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild className={`cursor-pointer hover:bg-[#34112f] p-5 ${isActive ? "bg-[#34112f]" : ""}`}>
+                <SidebarMenuButton asChild className={`rounded-[12px] pl-3 w-full h-[50px] cursor-pointer hover:bg-[#34112f] p-5 ${isActive ? "bg-[#34112f]" : ""}`}>
                   <a href={item.url}>
                     <img
                       src={item?.icon}

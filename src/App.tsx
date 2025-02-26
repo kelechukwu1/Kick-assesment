@@ -7,9 +7,15 @@ import CategoriesPage from './routes/categories/page';
 import MultiPlayerPage from './routes/multiplayer/page';
 import GamingStatsPage from './routes/gaming-stats/page';
 import HowToPlayPage from './routes/how-to-play/page';
-import SettingsPage from './routes/settings/page';
 import HelpPage from './routes/help/page';
 import LogoutPage from './routes/logout/page';
+import TriviaOfTheDayPage from './routes/trivia-of-the-day/page';
+import SettingsLayout from './layouts/SettingsLayout';
+import SettingsSupportPage from './routes/settings/support/page';
+import SettingsWithdrawalPage from './routes/settings/withdrawals/page';
+import SettingsGamePage from './routes/settings/game/page';
+import SettingsGeneralPage from './routes/settings/general/page';
+import SettingsProfilePage from './routes/settings/profile/page';
 
 
 function App() {
@@ -48,7 +54,30 @@ function App() {
         },
         {
           path: "settings",
-          element: <SettingsPage />
+          element: <SettingsLayout />,
+          children: [
+            {
+              index: true,
+              path: "/settings/withdrawal",
+              element: <SettingsWithdrawalPage />,
+            },
+            {
+              path: "/settings/support",
+              element: <SettingsSupportPage />,
+            },
+            {
+              path: "/settings/game",
+              element: <SettingsGamePage />,
+            },
+            {
+              path: "/settings/general",
+              element: <SettingsGeneralPage />,
+            },
+            {
+              path: "/settings/profile",
+              element: <SettingsProfilePage />,
+            }
+          ]
         },
         {
           path: "help",
@@ -57,6 +86,10 @@ function App() {
         {
           path: "logout",
           element: <LogoutPage />
+        },
+        {
+          path: "trivia-of-the-day",
+          element: <TriviaOfTheDayPage />
         },
       ]
     }

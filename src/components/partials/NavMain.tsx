@@ -21,13 +21,13 @@ export function NavMain({
     url.startsWith("/") ? url : `/${url}`;
   return (
     <SidebarGroup>
-      <SidebarMenu className="space-y-3">
+      <SidebarMenu className="space-y-1 w-[90%] mx-auto">
         {items.map((item) => {
           const isActive = location.pathname === normalizeUrl(item.url);
           return (
             <Link key={item.title} to={normalizeUrl(item.url)}>
               <SidebarMenuItem>
-                <SidebarMenuButton tooltip={item.title} className={`cursor-pointer p-5 flex items-center hover:bg-[#34112f] ${isActive ? "bg-[#FF197533]" : ""}`}>
+                <SidebarMenuButton tooltip={item.title} className={`cursor-pointer rounded-[12px] pl-3 w-full h-[50px] flex items-center hover:bg-[#34112f] ${isActive ? "bg-[#FF197533]" : ""}`}>
                   {item.icon && <img
                     src={item?.icon}
                     alt="Home Icon"

@@ -24,13 +24,13 @@ export const howToPlay = [
         paragraphOne: "Tap the 'Start Game' button to begin a new game.",
         paragraphTwo: "You can also choose the difficulty level: Easy, Medium, or Hard"
     },
-    // {
-    //     id: 5,
-    //     title: "Game Over",
-    //     paragraphOne: "The game ends when you answer a question incorrectly, run out of time, or finish all the questions.",
-    //     paragraphTwo: "Your total points will be displayed along with your rank",
-    //     paragraphThree: "Share your score on social media and challenge your friends to beat your high score."
-    // }
+    {
+        id: 5,
+        title: "Game Over",
+        paragraphOne: "The game ends when you answer a question incorrectly, run out of time, or finish all the questions.",
+        paragraphTwo: "Your total points will be displayed along with your rank",
+        paragraphThree: "Share your score on social media and challenge your friends to beat your high score."
+    }
 ]
 
 export const playMode = [
@@ -92,7 +92,7 @@ export const sidebarData = {
         },
         {
             name: "Settings",
-            url: "settings",
+            url: "settings/withdrawal",
             icon: "/settings.svg",
         },
         {
@@ -165,5 +165,137 @@ export const leaderboardData = [
         name: "Francis",
         coin: "/gold.svg"
     }
+]
 
+export const categoriesData = [
+    {
+        id: 1,
+        title: "General Football Trivia",
+        icon: "/football.svg",
+        color: "#8743ED"
+    },
+    {
+        id: 2,
+        title: "Championships and Tournaments",
+        icon: "/championship.svg",
+        color: "#C85B54"
+    },
+    {
+        id: 3,
+        title: "League Specific Trivia",
+        icon: "/league.svg",
+        color: "#6C7E92"
+    },
+    {
+        id: 4,
+        title: "World Cup Trivia",
+        icon: "/world.svg",
+        color: "#FEFCAF"
+    }, {
+        id: 5,
+        title: "Historical Moments",
+        icon: "/historical-moment.svg",
+        color: "#FC0106"
+    },
+    {
+        id: 6,
+        title: "Team Specific Trivia",
+        icon: "/team.svg",
+        color: "#E3E7F1"
+    }
+    ,
+    {
+        id: 7,
+        title: "Championships and Tournaments",
+        icon: "/championship.svg",
+        color: "#C85B54"
+    },
+    {
+        id: 8,
+        title: "League Specific Trivia",
+        icon: "/league.svg",
+        color: "#6C7E92"
+    }
+    , {
+        id: 9,
+        title: "World Cup Trivia",
+        icon: "/world.svg",
+        color: "#FEFCAF"
+    }
+    , {
+        id: 10,
+        title: "Historical Moments",
+        icon: "/historical-moment.svg",
+        color: "#FC0106"
+    }
+]
+
+export const challenges = [
+    {
+        title: "League Specific Trivia",
+        description: "Select your favorite team and access trivia questions specific to the team.",
+        icon: "/league.svg",
+    },
+    {
+        title: "World Cup Trivia",
+        description: "A section dedicated to World Cup trivia questions during tournament seasons.",
+        icon: "/world.svg",
+    },
+    {
+        title: "General Football Trivia",
+        description: "Test your knowledge on various aspects of football, history, and memorable moments.",
+        icon: "/football.svg",
+    },
+    {
+        title: "League Specific Trivia",
+        description: "Select your favorite team and access trivia questions specific to the team.",
+        icon: "/league.svg",
+    },
+]
+
+export const settingsLinks = [
+    {
+        title: "General settings",
+        description: "Lorem ipsum dolor sit amet consectetur. Quam nulla nunc ac consectetur sit volutpat.",
+        href: "/settings/general",
+    },
+    {
+        title: "Game settings",
+        description: "Lorem ipsum dolor sit amet consectetur. Quam nulla nunc ac consectetur sit volutpat.",
+        href: "/settings/game",
+    },
+    {
+        title: "Profile settings",
+        description: "Lorem ipsum dolor sit amet consectetur. Quam nulla nunc ac consectetur sit volutpat.",
+        href: "/settings/profile",
+    },
+    {
+        title: "Withdrawal settings",
+        description: "Lorem ipsum dolor sit amet consectetur. Quam nulla nunc ac consectetur sit volutpat.",
+        href: "/settings/withdrawal",
+    },
+    {
+        title: "Feedback & Support",
+        description: "Lorem ipsum dolor sit amet consectetur. Quam nulla nunc ac consectetur sit volutpat.",
+        href: "/settings/support",
+    },
+]
+
+export const recommendedGames = [
+    {
+        title: "Spin the Wheel",
+        image: "/spin.svg",
+    },
+    {
+        title: "Word Scramble",
+        image: "/word.svg",
+    },
+    {
+        title: "Card Match",
+        image: "/hearts.svg",
+    },
+    {
+        title: "Memory Game",
+        image: "/pitch.svg",
+    },
 ]
