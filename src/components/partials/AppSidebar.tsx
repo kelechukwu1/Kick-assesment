@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import { NavMain } from "@/components/partials/NavMain"
-import { NavMinor } from "@/components/partials/NavMinor"
 import { NavTrivia } from "@/components/partials/NavTrivia"
 import {
   Sidebar,
@@ -10,7 +8,9 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar"
 import { sidebarData } from "@/data"
-import { Logo } from "./Logo"
+import Logo from "./Logo"
+import NavMain from "./NavMain"
+import NavMinor from "./NavMinor"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (

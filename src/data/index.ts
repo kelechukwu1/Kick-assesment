@@ -249,8 +249,8 @@ export const challenges = [
         icon: "/football.svg",
     },
     {
-        title: "League Specific Trivia",
-        description: "Select your favorite team and access trivia questions specific to the team.",
+        title: "Country Specific Trivia",
+        description: "Select your favorite country and access trivia questions specific to the country team.",
         icon: "/league.svg",
     },
 ]

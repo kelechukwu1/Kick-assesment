@@ -87,15 +87,15 @@ const SettingsWithdrawalPage = () => {
                     <div className="space-y-3">
                         <h4 className="text-sm">Choose withdrawal method</h4>
                         <RadioGroup defaultValue="bank" className="flex">
-                            <div className="flex items-center space-x-2">
+                            <div className="flex items-center space-x-1 md:space-x-2">
                                 <RadioGroupItem value="bank" id="bank" className="cursor-pointer" />
                                 <Label htmlFor="bank">Bank transfer</Label>
                             </div>
-                            <div className="flex items-center space-x-2">
+                            <div className="flex items-center space-x-1 md:space-x-2">
                                 <RadioGroupItem value="wallet" id="wallet" className="cursor-pointer" />
                                 <Label htmlFor="wallet">Digital wallet</Label>
                             </div>
-                            <div className="flex items-center space-x-2">
+                            <div className="flex items-center space-x-1 md:space-x-2">
                                 <RadioGroupItem value="paypal" id="paypal" className="cursor-pointer" />
                                 <Label htmlFor="paypal">Paypal</Label>
                             </div>

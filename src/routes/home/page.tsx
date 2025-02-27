@@ -32,8 +32,8 @@ const DashboardPage = () => {
 
             <div className="space-y-3 w-full md:max-w-[80%]">
                 <p className="text-sm text-[#757575]">Kick start your day with high points</p>
-                <div className="md:grid md:grid-cols-3 md:gap-5 space-y-5 md:space-y-0">
-                    <Card className="bg-white md:col-span-2 border-[#FF1975] h-full lg:max-h-[190px]">
+                <div className="lg:grid lg:grid-cols-3 md:gap-5 space-y-5 lg:space-y-0">
+                    <Card className="bg-white lg:col-span-2 border-[#FF1975] h-full lg:max-h-[190px]">
                         <CardContent className="grid lg:gap-4 p-5">
                             <div className="space-y-2 lg:space-y-3">
                                 <div className="flex items-center gap-2 max-w-fit">
@@ -44,9 +44,9 @@ const DashboardPage = () => {
                                 </div>
                                 <p className="text-md text-black font-medium">{isBalanceVisible ? "$4500.99" : "****"} </p>
                                 <div className="flex gap-2">
-                                    <Button className="bg-[#FF1975] text-white rounded-[10px] text-sm cursor-pointer hover:bg-pink-600 transition-all duration-300">Earn more</Button>
-                                    <Button variant="outline" className="bg-[#C8C8C8] rounded-[10px] text-sm transition-all duration-300 cursor-pointer hover:bg-gray-400">Deposit</Button>
-                                    <Button variant="outline" className="bg-[#C8C8C8] rounded-[10px] text-sm transition-all duration-300 hover:bg-gray-400 cursor-pointer">Withdraw</Button>
+                                    <Button className="px-3 py-2 bg-[#FF1975] text-white rounded-[10px] text-sm cursor-pointer hover:bg-pink-600 transition-all duration-300">Earn more</Button>
+                                    <Button variant="outline" className="px-3 py-2 bg-[#C8C8C8] rounded-[10px] text-sm transition-all duration-300 cursor-pointer hover:bg-gray-400">Deposit</Button>
+                                    <Button variant="outline" className="px-3 py-2 bg-[#C8C8C8] rounded-[10px] text-sm transition-all duration-300 hover:bg-gray-400 cursor-pointer">Withdraw</Button>
                                 </div>
                             </div>
                             <div className="hidden lg:block">
@@ -54,7 +54,7 @@ const DashboardPage = () => {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="md:col-span-1 h-[50px] md:h-full w-full border-[#FF1975] bg-white"></Card>
+                    <Card className="lg:col-span-1 h-[50px] md:h-full w-full border-[#FF1975] bg-white"></Card>
                 </div>
 
                 <div className="space-y-2">

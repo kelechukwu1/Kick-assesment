@@ -1,4 +1,3 @@
-
 import {
   SidebarGroup,
   SidebarMenu,
@@ -7,7 +6,18 @@ import {
 } from "@/components/ui/sidebar"
 import { useLocation, Link } from "react-router-dom"
 
-export function NavMain({
+/**
+ * NavMain Component
+ * 
+ * Renders a navigation menu with sidebar items. Each item includes a title, URL, and optional icon.
+ * The active menu item is highlighted based on the current route.
+ * 
+ * @param {Object} props - Component props.
+ * @param {Array} props.items - An array of navigation items, each containing a title, URL, and optional icon.
+ * 
+ * @returns {JSX.Element} - A sidebar navigation menu with dynamic active state highlighting.
+ */
+const NavMain = ({
   items,
 }: {
   items: {
@@ -15,7 +25,7 @@ export function NavMain({
     url: string
     icon?: string
   }[]
-}) {
+}) => {
   const location = useLocation();
 
   return (
@@ -45,3 +55,4 @@ export function NavMain({
     </SidebarGroup>
   )
 }
+export default NavMain

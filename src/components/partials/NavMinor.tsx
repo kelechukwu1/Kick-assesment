@@ -6,7 +6,9 @@ import {
 } from "@/components/ui/sidebar"
 import { useLocation, Link } from "react-router-dom"
 
-export function NavMinor({
+
+
+const NavMinor = ({
   items,
 }: {
   items: {
@@ -14,7 +16,7 @@ export function NavMinor({
     url: string
     icon: string
   }[]
-}) {
+}) => {
   const location = useLocation();
 
   return (
@@ -46,3 +48,4 @@ export function NavMinor({
     </SidebarGroup>
   )
 }
+export default NavMinor

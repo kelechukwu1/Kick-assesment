@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Avatar } from "@/components/Avatar"
 import { question } from "@/data"
+import { toast } from "sonner"
+
 
 const TriviaOfTheDayPage = () => {
     const [selectedOption, setSelectedOption] = useState<string | null>(null)
@@ -11,9 +13,9 @@ const TriviaOfTheDayPage = () => {
     const handleSubmit = () => {
         if (!selectedOption) return
 
-        if (selectedOption) {
-            console.log("Answer:", selectedOption)
-        }
+        toast("Your answer", {
+            description: `${selectedOption} will be submitted`
+        })
     }
 
     return (
@@ -45,10 +47,10 @@ const TriviaOfTheDayPage = () => {
                                 variant="outline"
                                 className={cn(
                                     "w-full h-14 text-white rounded-xl cursor-pointer border-[#FF1975] bg-transparent hover:bg-pink-600/10",
-                                    selectedOption === option.id && "bg-pink-600/10 border-[#FF1975]",
+                                    selectedOption === option.text && "bg-pink-600/10 border-[#FF1975]",
                                     "justify-start w-full"
                                 )}
-                                onClick={() => setSelectedOption(option.id)}
+                                onClick={() => setSelectedOption(option.text)}
                             >
                                 <span className="text-start opacity-60">{option.id}.</span>
                                 <span className="flex-1 text-center">

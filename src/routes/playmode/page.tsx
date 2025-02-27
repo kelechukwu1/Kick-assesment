@@ -1,5 +1,6 @@
 import { Avatar } from "@/components/Avatar"
 import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { howToPlay, playMode } from "@/data"
 
 const PlayModePage = () => {
@@ -47,7 +48,7 @@ const PlayModePage = () => {
                             <Button size={"sm"} className="bg-[#FF1975] hover:bg-[#d7306b] transition all duration-300 cursor-pointer font-semibold text-sm">Find Friends</Button>
                         </div>
                     </div>
-                    <div className="bg-[#FCE2E2] border border-[#FA5045] rounded-[10px] text-black p-8 lg:max-h-[38.5rem] max-w-[30.1rem] overflow-y-auto">
+                    <ScrollArea className="bg-[#FCE2E2] border border-[#FA5045] rounded-[10px] text-black p-8 lg:max-h-[38.5rem] lg:max-w-[30.1rem] overflow-y-auto">
                         <div className="flex flex-col items-center mb-5 gap-5">
                             <h4 className="uppercase text-center font-semibold text-sm text-[#333333]">How to play</h4>
                             <img src="/soccer.svg" alt="Football field" height={50} width={50} />
@@ -78,7 +79,7 @@ const PlayModePage = () => {
                             </ul>
                         </div>
                         <p className="mt-5 text-[#616161] text-sm">Get ready to dive into the world of football trivia and become the ultimate soccer expert! Have fun and enjoy the game. Good luck!</p>
-                    </div>
+                    </ScrollArea>
                 </div>
             </div>
         </div>
