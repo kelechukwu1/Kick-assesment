@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from "@/layouts/DashboardLayout"
 import DashboardPage from './routes/home/page';
 import PlayModePage from './routes/playmode/page';
 import LeaderboardPage from './routes/leaderboard/page';
@@ -18,13 +17,14 @@ import SettingsGeneralPage from './routes/settings/general/page';
 import SettingsProfilePage from './routes/settings/profile/page';
 import CategoriesQuestion from './routes/categories/questions/page';
 import { Toaster } from "@/components/ui/sonner"
+import DashboardLayout from '@/layouts/DashboardLayout';
 
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: <DashboardLayout />,
       children: [
         {
           index: true,

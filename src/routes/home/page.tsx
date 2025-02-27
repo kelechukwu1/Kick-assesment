@@ -1,6 +1,7 @@
 import { Avatar } from "@/components/Avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { recommendedGames } from "@/data"
 import { Eye } from "lucide-react"
 import { useState } from "react"
@@ -9,26 +10,28 @@ import { Link } from "react-router-dom"
 const DashboardPage = () => {
     const [isBalanceVisible, setIsBalanceVisible] = useState(true);
     return (
-        <div className="w-full flex-1 flex-col p-8 justify-center items-center">
-            <header className="flex justify-between w-full items-center mb-5 lg:mt-7">
-                <h1 className="text-md">Hi Stella,</h1>
-                <div className="flex items-center gap-x-4">
-                    <Avatar
-                        src="/notification.svg"
-                        alt="notification avatar"
-                        width={20}
-                        height={20}
-                        className="cursor-pointer"
-                    />
-                    <Avatar
-                        src="avatar-one.svg"
-                        alt="female avatar"
-                        width={30}
-                        height={30}
-                        className="cursor-pointer"
-                    />
-                </div>
-            </header>
+        <div className="p-8 w-full flex flex-1 flex-col items-start">
+            <div className="w-full">
+                <header className="flex flex-1 justify-between w-full items-center mb-5 lg:mt-7">
+                    <h1 className="text-md">Hi Stella,</h1>
+                    <div className="flex items-center gap-x-4">
+                        <Avatar
+                            src="/notification.svg"
+                            alt="notification avatar"
+                            width={20}
+                            height={20}
+                            className="cursor-pointer"
+                        />
+                        <Avatar
+                            src="/avatar-one.svg"
+                            alt="female avatar"
+                            width={30}
+                            height={30}
+                            className="cursor-pointer"
+                        />
+                    </div>
+                </header>
+            </div>
 
             <div className="space-y-3 w-full md:max-w-[80%]">
                 <p className="text-sm text-[#757575]">Kick start your day with high points</p>
@@ -70,9 +73,8 @@ const DashboardPage = () => {
 
                 <div className="space-y-2">
                     <h2 className="text-sm text-white">Recommended for you</h2>
-                    <div className="overflow-x-auto">
-
-                        <div className="flex gap-4 overflow-x-auto lg:w-[70rem] snap-x">
+                    <ScrollArea className="overflow-x-auto">
+                        <div className="flex gap-4 overflow-x-auto lg:w-[70rem snap-x">
                             {recommendedGames.map((game) => (
                                 <div key={game.title} className="rounded-md cursor-grab snap-center flex-shrink-0">
                                     <img
@@ -83,7 +85,7 @@ const DashboardPage = () => {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </ScrollArea>
                 </div>
             </div>
         </div>

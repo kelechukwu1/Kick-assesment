@@ -30,7 +30,7 @@ const MultiPlayerPage = () => {
                 </div>
             </header>
 
-            <div className="w-full md:max-w-[80%]">
+            <div className="w-full md:max-w-[95%] lg:max-w-[80%]">
                 <p className="text-md text-[#757575] mb-3 md:mb-5">Choose a challenge to play</p>
                 <div className="grid md:grid-cols-2 gap-5 mb-10">
                     {challenges.map((challenge, i) => (

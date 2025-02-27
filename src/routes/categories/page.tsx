@@ -54,7 +54,7 @@ const CategoriesPage = () => {
                         />
                     </div>
                 </header>
-                <div className="w-full md:max-w-[90%] space-y-4 md:pr-20">
+                <div className="w-full md:max-w-[90%] space-y-4 lg:pr-10">
                     <p className="text-sm mb-3 md:mb-5">What game would you like to play today?</p>
                     <div className="flex justify-between text-md items-center">
                         <span>Most Popular</span>
@@ -71,11 +71,11 @@ const CategoriesPage = () => {
                             />
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5 lg:gap-4">
                         {categoriesData.map((item) => (
                             <div key={item.id}
                                 onClick={() => setIsTriviaModalOpen(true)}
-                                style={{ backgroundColor: item.color }} className={`cursor-pointer flex flex-col items-center justify-center lg:justify-around p-5 gap-3 lg:gap-0    w-full max-w-[172px] h-full lg:h-[180px] rounded-[10px]`}>
+                                style={{ backgroundColor: item.color }} className={`cursor-pointer flex flex-col items-center justify-center lg:justify-around p-5 gap-3 lg:gap-0 w-full max-w-[170px] h-full lg:h-[170px] rounded-[10px]`}>
                                 <Avatar
                                     src={item.icon}
                                     alt={`${item.title} avatar`}
