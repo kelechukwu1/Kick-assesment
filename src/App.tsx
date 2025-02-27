@@ -16,6 +16,8 @@ import SettingsWithdrawalPage from './routes/settings/withdrawals/page';
 import SettingsGamePage from './routes/settings/game/page';
 import SettingsGeneralPage from './routes/settings/general/page';
 import SettingsProfilePage from './routes/settings/profile/page';
+import CategoriesQuestion from './routes/categories/questions/page';
+import { Toaster } from "@/components/ui/sonner"
 
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
         },
         {
           path: "categories",
-          element: <CategoriesPage />
+          element: <CategoriesPage />,
         },
         {
           path: "multiplayer",
@@ -91,11 +93,18 @@ function App() {
           path: "trivia-of-the-day",
           element: <TriviaOfTheDayPage />
         },
+        {
+          path: "/categories/questions",
+          element: <CategoriesQuestion />,
+        }
       ]
     }
   ])
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+      <Toaster />
+    </>
   );
 }
 

@@ -17,15 +17,14 @@ export function NavMain({
   }[]
 }) {
   const location = useLocation();
-  const normalizeUrl = (url: string) =>
-    url.startsWith("/") ? url : `/${url}`;
+
   return (
     <SidebarGroup>
       <SidebarMenu className="space-y-1 w-[90%] mx-auto">
         {items.map((item) => {
-          const isActive = location.pathname === normalizeUrl(item.url);
+          const isActive = location.pathname === item.url || (item.url !== "/" && location.pathname.startsWith(`/${item.url.split("/")[0]}`));
           return (
-            <Link key={item.title} to={normalizeUrl(item.url)}>
+            <Link key={item.title} to={item.url}>
               <SidebarMenuItem>
                 <SidebarMenuButton tooltip={item.title} className={`cursor-pointer rounded-[12px] pl-3 w-full h-[50px] flex items-center hover:bg-[#34112f] ${isActive ? "bg-[#FF197533]" : ""}`}>
                   {item.icon && <img

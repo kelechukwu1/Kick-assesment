@@ -1,3 +1,5 @@
+//This file contains dummy data I used across the application
+import { DifficultyOption, Question } from "@/types"
 
 export const howToPlay = [
     {
@@ -297,5 +299,93 @@ export const recommendedGames = [
     {
         title: "Memory Game",
         image: "/pitch.svg",
+    },
+]
+
+export const players = Array(22)
+    .fill(null)
+    .map((_, i) => ({
+        id: i,
+        name: `Player ${i + 1}`,
+        avatar:
+            "avatar-two.svg",
+    }))
+
+export const questions: Question[] = [
+    {
+        id: 1,
+        question: "Which player has scored the most goals in the history of the English Premier League?",
+        options: [
+            { id: "a", text: "Alan Shearer" },
+            { id: "b", text: "Ronaldo" },
+            { id: "c", text: "Messi" },
+            { id: "d", text: "Sadio Mane" },
+        ],
+        correctAnswer: "a",
+    },
+    {
+        id: 2,
+        question: "Who won the 2018 FIFA World Cup?",
+        options: [
+            { id: "a", text: "Brazil" },
+            { id: "b", text: "France" },
+            { id: "c", text: "Germany" },
+            { id: "d", text: "Argentina" },
+        ],
+        correctAnswer: "b",
+    },
+    {
+        id: 3,
+        question: "Which club has won the most Champions League titles?",
+        options: [
+            { id: "a", text: "Barcelona" },
+            { id: "b", text: "Real Madrid" },
+            { id: "c", text: "Liverpool" },
+            { id: "d", text: "Bayern Munich" },
+        ],
+        correctAnswer: "b",
+    },
+    {
+        id: 4,
+        question: "Who holds the record for the most assists in Premier League history?",
+        options: [
+            { id: "a", text: "Kevin De Bruyne" },
+            { id: "b", text: "Wayne Rooney" },
+            { id: "c", text: "Ryan Giggs" },
+            { id: "d", text: "Steven Gerrard" },
+        ],
+        correctAnswer: "c",
+    },
+]
+
+export const question: Question[] = [
+    {
+        id: 1,
+        question: "Which player has scored the most goals in the history of the English Premier League?",
+        options: [
+            { id: "a", text: "Alan Shearer" },
+            { id: "b", text: "Ronaldo" },
+            { id: "c", text: "Messi" },
+            { id: "d", text: "Sadio Mane" },
+        ],
+        correctAnswer: "a",
+    },
+]
+export const difficultyLevels: DifficultyOption[] = [
+    {
+        title: "easy",
+        description: "Suitable for beginners or casual football fans",
+    },
+    {
+        title: "intermediate",
+        description: "Requires a bit more in-depth football knowledge",
+    },
+    {
+        title: "advanced",
+        description: "Obscure facts, statistics, and in-depth knowledge of the sport.",
+    },
+    {
+        title: "expert",
+        description: "Extremely difficult questions for hardcore football fans or trivia experts",
     },
 ]

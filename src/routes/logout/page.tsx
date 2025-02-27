@@ -2,7 +2,7 @@ const LogoutPage = () => {
     return (
         <div className="h-full w-full flex flex-row justify-center items-center">
             <h1>
-                Logout Page
+                Logout Page coming soon...
             </h1>
         </div>
     )

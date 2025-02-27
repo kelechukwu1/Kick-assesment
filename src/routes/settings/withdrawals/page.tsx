@@ -15,7 +15,7 @@ const SettingsWithdrawalPage = () => {
                 <CardHeader className="flex flex-row items-center justify-between">
                     <CardTitle className="text-[18px] text-white">Withdrawal Settings</CardTitle>
                     <Button variant="outline" size="sm" className="cursor-pointer border border-[#FF1975] gap-1 bg-[#3d4250] rounded-[8px]">
-                        <span className="font-light">
+                        <span className="font-normal">
                             Edit
                         </span>
                         <Avatar
@@ -26,7 +26,7 @@ const SettingsWithdrawalPage = () => {
                         />
                     </Button>
                 </CardHeader>
-                <CardContent className="space-y-4 w-full lg:max-w-[60%]">
+                <CardContent className="space-y-4 w-full lg:max-w-[65%]">
                     <div className="flex items-center gap-4">
                         <Avatar
                             src="/avatar-one.svg"
@@ -44,21 +44,21 @@ const SettingsWithdrawalPage = () => {
                         <div className="grid gap-4">
                             <Button
                                 variant="outline"
-                                className={`cursor-pointer justify-start text-left font-normal h-[41px] border border-gray-700 text-[#7A7A7A] text-xs rounded-[10px] ${selectedID === 'national' ? 'bg-[#FF197526]' : ''}`}
+                                className={`cursor-pointer justify-start text-left font-normal h-[41px] border border-gray-700 text-[#7A7A7A] text-sm rounded-[10px] ${selectedID === 'national' ? 'bg-[#FF197526]' : ''}`}
                                 onClick={() => setSelectedID('national')}
                             >
                                 National ID
                             </Button>
                             <Button
                                 variant="outline"
-                                className={`cursor-pointer justify-start text-left font-normal h-[41px] border border-gray-700 text-[#7A7A7A] text-xs rounded-[10px] ${selectedID === 'passport' ? 'bg-[#FF197526]' : ''}`}
+                                className={`cursor-pointer justify-start text-left font-normal h-[41px] border border-gray-700 text-[#7A7A7A] text-sm rounded-[10px] ${selectedID === 'passport' ? 'bg-[#FF197526]' : ''}`}
                                 onClick={() => setSelectedID('passport')}
                             >
                                 International Passport
                             </Button>
                             <Button
                                 variant="outline"
-                                className={`cursor-pointer justify-start text-left font-normal h-[41px] border border-gray-700 text-[#7A7A7A] text-xs rounded-[10px] ${selectedID === 'license' ? 'bg-[#FF197526]' : ''}`}
+                                className={`cursor-pointer justify-start text-left font-normal h-[41px] border border-gray-700 text-[#7A7A7A] text-sm rounded-[10px] ${selectedID === 'license' ? 'bg-[#FF197526]' : ''}`}
                                 onClick={() => setSelectedID('license')}
                             >
                                 Driver&apos;s License
@@ -71,15 +71,15 @@ const SettingsWithdrawalPage = () => {
                         <div className="grid gap-4">
                             <div className="flex flex-col space-y-2">
                                 <Label htmlFor="account-name" className="text-[#7A7A7A]">Account name</Label>
-                                <Input id="account-name" placeholder="Enter account name" className="rounded-[10px] h-[32px] border border-gray-700 text-[#7A7A7A] text-xs" />
+                                <Input id="account-name" placeholder="Enter account name" className="rounded-[10px] h-[32px] border border-gray-700 text-[#7A7A7A] text-sm" />
                             </div>
                             <div className="flex flex-col space-y-2">
                                 <Label htmlFor="account-name" className="text-[#7A7A7A]">Bank name</Label>
-                                <Input id="bank-name" placeholder="Enter bank name" className="rounded-[10px] h-[32px] border border-gray-700 text-[#7A7A7A] text-xs" />
+                                <Input id="bank-name" placeholder="Enter bank name" className="rounded-[10px] h-[32px] border border-gray-700 text-[#7A7A7A] text-sm" />
                             </div>
                             <div className="flex flex-col space-y-2">
                                 <Label htmlFor="account-name" className="text-[#7A7A7A]">Account number</Label>
-                                <Input id="account-number" placeholder="Enter account number" className="rounded-[10px] h-[32px] border border-gray-700 text-[#7A7A7A] text-xs" />
+                                <Input id="account-number" placeholder="Enter account number" className="rounded-[10px] h-[32px] border border-gray-700 text-[#7A7A7A] text-sm" />
                             </div>
                         </div>
                     </div>

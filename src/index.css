@@ -4,8 +4,18 @@
 
 @plugin "tailwindcss-animate";
 @custom-variant dark (&:is(.dark *));
+
+/* Avenir LT Std Font Variants */
+@font-face {
+  font-family: Avenir LT Std;
+  src: url('/src/assets/fonts/AvenirLTStd-Light.otf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir LT Std, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -25,6 +35,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Avenir LT Std';
+  font-weight: normal;
 }
-
 

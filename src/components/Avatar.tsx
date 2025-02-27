@@ -1,6 +1,4 @@
-import React from "react";
-
-type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement>;
+import { AvatarProps } from "@/types";
 
 export function Avatar({ src, alt, width, height, className, ...props }: AvatarProps) {
     return (

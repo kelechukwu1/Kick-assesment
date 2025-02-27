@@ -22,7 +22,7 @@ const GamingStatsPage = () => {
                 </div>
             </header>
             <div className="bg-[#75757526] p-5 mt-32 rounded-md w-full max-w-96 h-40 space-y-4">
-                <h1 className="font-light text-xs">Game Rank</h1>
+                <h1 className="font-light text-sm">Game Rank</h1>
                 <div className="flex gap-5">
                     <Avatar
                         src="/award.svg"

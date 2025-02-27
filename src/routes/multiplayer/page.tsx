@@ -1,17 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar } from "@/components/Avatar"
-import { challenges } from "@/data"
+import { challenges, players } from "@/data"
 import { useState } from "react"
 
-const players = Array(22)
-    .fill(null)
-    .map((_, i) => ({
-        id: i,
-        name: `Player ${i + 1}`,
-        avatar:
-            "avatar-two.svg",
-    }))
 const MultiPlayerPage = () => {
     const [selectedChallenge, setSelectedChallenge] = useState("");
     return (
@@ -93,7 +85,7 @@ const MultiPlayerPage = () => {
 
                 <section>
                     <h2 className="text-md text-[#757575] mb-2">Invite a team player?</h2>
-                    <p className="text-[#757575] text-xs mb-2">Send a direct link to invite someone to join your challenge</p>
+                    <p className="text-[#757575] text-sm mb-2">Send a direct link to invite someone to join your challenge</p>
                     <Button variant="link" className="cursor-pointer text-[#FF1975] hover:text-pink-400 text-xs p-0">
                         How to use invitation code?
                     </Button>

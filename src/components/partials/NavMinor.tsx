@@ -21,24 +21,24 @@ export function NavMinor({
     <SidebarGroup>
       <SidebarMenu className="space-y-1 w-[90%] mx-auto">
         {items.map((item) => {
-          const isActive = location.pathname === `/${item.url}`;
+          const isActive = location.pathname === `/${item.url}` || location.pathname.startsWith(`/${item.url.split("/")[0]}`) || location.pathname.startsWith(`/${item.url}`)
           return (
-            <Link key={item.name} to={item.url}>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild className={`rounded-[12px] pl-3 w-full h-[50px] cursor-pointer hover:bg-[#34112f] p-5 ${isActive ? "bg-[#34112f]" : ""}`}>
-                  <a href={item.url}>
-                    <img
-                      src={item?.icon}
-                      alt="Home Icon"
-                      width={20}
-                      height={20}
-                      className="text-gray-500"
-                    />
-                    <span className="text-gray-500">{item.name}</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </Link>
+            <SidebarMenuItem key={item.name} >
+              <SidebarMenuButton asChild
+                className={`rounded-[12px] pl-3 w-full h-[50px] cursor-pointer hover:bg-[#34112f] p-5 ${isActive ? "bg-[#34112f]" : ""}`}
+              >
+                <Link to={item.url}>
+                  <img
+                    src={item?.icon}
+                    alt="Home Icon"
+                    width={20}
+                    height={20}
+                    className="text-gray-500"
+                  />
+                  <span className="text-gray-500">{item.name}</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
           )
         }
         )}

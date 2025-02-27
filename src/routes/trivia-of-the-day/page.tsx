@@ -3,27 +3,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Avatar } from "@/components/Avatar"
-
-interface TriviaOption {
-    id: string
-    text: string
-}
+import { question } from "@/data"
 
 const TriviaOfTheDayPage = () => {
     const [selectedOption, setSelectedOption] = useState<string | null>(null)
 
     const handleSubmit = () => {
+        if (!selectedOption) return
+
         if (selectedOption) {
-            // Handle submission logic here
-            console.log("Submitted answer:", selectedOption)
+            console.log("Answer:", selectedOption)
         }
     }
-    const options: TriviaOption[] = [
-        { id: "a", text: "Alan Shearer" },
-        { id: "b", text: "Ronaldo" },
-        { id: "c", text: "Messi" },
-        { id: "d", text: "Sadio Mane" },
-    ]
+
     return (
         <div className="min-h-screen flex items-center justify-center p-4">
             <Card className="w-full max-w-lg border-none text-white">
@@ -43,11 +35,11 @@ const TriviaOfTheDayPage = () => {
                     </p>
                 </CardHeader>
                 <CardContent className="space-y-5 flex flex-col items-center">
-                    <div className="text-center text-md px-6 md:px-12">
-                        Which player has scored the most goals in the history of the English Premier League?
+                    <div className="text-center text-md px-6 md:px-12 max-w-md">
+                        {question[0]?.question}
                     </div>
-                    <div className="space-y-4">
-                        {options.map((option) => (
+                    <div className="space-y-4 max-w-sm">
+                        {question[0]?.options.map((option) => (
                             <Button
                                 key={option.id}
                                 variant="outline"
