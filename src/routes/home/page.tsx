@@ -7,6 +7,15 @@ import { Eye } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
+/**
+ * DashboardPage Component
+ * 
+ * Displays the main dashboard content, including the user's wallet balance, top players,
+ * and recommended games. The wallet balance can be toggled between visible and hidden states.
+ * 
+ * @returns {JSX.Element} - A dashboard page with interactive elements and dynamic content.
+ */
+
 const DashboardPage = () => {
     const [isBalanceVisible, setIsBalanceVisible] = useState(true);
     return (
@@ -37,8 +46,8 @@ const DashboardPage = () => {
                 <p className="text-sm text-[#757575]">Kick start your day with high points</p>
                 <div className="lg:grid lg:grid-cols-3 md:gap-5 space-y-5 lg:space-y-0">
                     <Card className="bg-white lg:col-span-2 border-[#FF1975] h-full lg:max-h-[190px]">
-                        <CardContent className="grid lg:gap-4 p-5">
-                            <div className="space-y-2 lg:space-y-3">
+                        <CardContent className="lg:flex lg:gap-4 p-5">
+                            <div className="lg:grid-cols-2 space-y-2 lg:space-y-3">
                                 <div className="flex items-center gap-2 max-w-fit">
                                     <h2 className="text-sm w-full font-medium text-gray-500">Your Wallet Balance</h2>
                                     <Eye className="size-4 text-gray-500 cursor-pointer"
@@ -52,12 +61,12 @@ const DashboardPage = () => {
                                     <Button variant="outline" className="px-3 py-2 bg-[#C8C8C8] rounded-[10px] text-sm transition-all duration-300 hover:bg-gray-400 cursor-pointer">Withdraw</Button>
                                 </div>
                             </div>
-                            <div className="hidden lg:block">
+                            <div className="hidden lg:flex flex-1 h-full">
                                 <div className="h-full w-full rounded-lg bg-gradient-to-br from-pink-200 to-transparent" />
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="lg:col-span-1 h-[50px] md:h-full w-full border-[#FF1975] bg-white"></Card>
+                    <Card className="lg:col-span-1 h-[100px] md:h-[150px] lg:h-full w-full border-[#FF1975] bg-white"></Card>
                 </div>
 
                 <div className="space-y-2">
